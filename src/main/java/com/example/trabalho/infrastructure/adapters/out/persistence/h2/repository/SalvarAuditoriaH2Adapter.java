@@ -31,7 +31,7 @@ public class SalvarAuditoriaH2Adapter implements SalvarAuditoriaPort {
         RegistroAuditoriaEntity tabelaLinha = conversorEntidade.converterParaLinhaTabela(ocorrencia);
 
         tabelaLinha.setErrorId(UUID.randomUUID().toString());
-        tabelaLinha.setQueueName(this.nomeFilaConfigurada);
+        tabelaLinha.setQueueName(ocorrencia.getOrigin());
         tabelaLinha.setTimestamp(OffsetDateTime.now().toString());
         tabelaLinha.setStatus("PENDING_ANALYSIS");
         tabelaLinha.setSeverity(ocorrencia.classificarNivelSeveridade());
