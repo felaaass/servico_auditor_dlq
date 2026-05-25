@@ -1,6 +1,3 @@
-# Serviço de Auditoria de DLQ (Dead Letter Queue)
-
-Este projeto é um serviço independente de consumo (Worker) responsável por escutar ativamente uma fila DLQ na AWS SQS, aplicar regras de triagem e persistir as falhas em um banco de dados relacional para auditoria.
 
 ## Justificativa Arquitetural
 
